@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const navLinks = [
   { label: 'Home', href: '#' },
   { label: 'Services', href: '#services' },
@@ -12,23 +14,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="16" cy="16" r="7" fill="#FBC02D" />
-                <g stroke="#FBC02D" strokeWidth="2" strokeLinecap="round">
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="16" y1="26" x2="16" y2="30" />
-                  <line x1="2" y1="16" x2="6" y2="16" />
-                  <line x1="26" y1="16" x2="30" y2="16" />
-                  <line x1="5.86" y1="5.86" x2="8.69" y2="8.69" />
-                  <line x1="23.31" y1="23.31" x2="26.14" y2="26.14" />
-                  <line x1="26.14" y1="5.86" x2="23.31" y2="8.69" />
-                  <line x1="8.69" y1="23.31" x2="5.86" y2="26.14" />
-                </g>
-              </svg>
-              <span className="text-white font-bold text-xl">
-                <span className="text-primary">AeroSun</span>{' '}
-                <span className="text-secondary">Energy</span>
-              </span>
+              <Image
+                src="/logo-horizontal.jpeg"
+                alt="AeroSun Energy"
+                width={120}
+                height={54}
+                className="object-contain"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Power from Sun &amp; Wind
