@@ -53,6 +53,14 @@ export default function Hero() {
               className="inline-block bg-white text-primary font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-accent hover:text-white transition-colors duration-200"
             >
               See How It Works
+            </a>
+            <a
+              href="#contact"
+              className="inline-block border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-200"
+            >
+              Get a Free Quote
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* SVG Illustration – three wind generator types + solar panel */}
