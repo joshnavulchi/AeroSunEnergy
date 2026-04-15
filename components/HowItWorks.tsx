@@ -1,0 +1,129 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
+const steps = [
+  {
+    number: '01',
+    title: 'Site Assessment',
+    description:
+      'Our engineers visit your location — rooftop, road, park, or open land — to measure sunlight exposure, wind patterns, and available space. This data shapes a system perfectly tuned to your site.',
+    icon: '📍',
+    color: 'from-primary to-blue-400',
+  },
+  {
+    number: '02',
+    title: 'Custom System Design',
+    description:
+      'We design a hybrid solar wind energy system tailored for your energy needs and budget. Solar panels are oriented for maximum daylight capture while wind turbines are sized and positioned to harvest wind around the clock.',
+    icon: '📐',
+    color: 'from-secondary to-teal-400',
+  },
+  {
+    number: '03',
+    title: 'Installation',
+    description:
+      'Our certified installation team sets up the solar panels, wind turbines, smart inverters, and optional battery storage — all integrated into one unified green energy system with zero disruption to your operations.',
+    icon: '🔧',
+    color: 'from-accent to-yellow-400',
+  },
+  {
+    number: '04',
+    title: 'Smart Monitoring',
+    description:
+      'An IoT-enabled dashboard gives you real-time visibility into power generation, consumption, and savings — from your phone or computer. The system auto-optimises output between solar and wind at all times.',
+    icon: '📊',
+    color: 'from-primary to-secondary',
+  },
+  {
+    number: '05',
+    title: 'Continuous Power, Minimal Maintenance',
+    description:
+      'Once live, your hybrid system generates electricity day and night with minimal maintenance. Solar works hardest in daylight; wind covers the rest. Together, they deliver continuous, reliable power to support sustainable infrastructure.',
+    icon: '⚡',
+    color: 'from-secondary to-green-400',
+  },
+]
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.18 } },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' as const } },
+}
+
+export default function HowItWorks() {
+  return (
+    <section id="how-it-works" className="py-24 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Simple Process</span>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
+            How It Works
+          </h2>
+          <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+            From site visit to 24/7 power generation — here&apos;s how we turn any location into a clean energy source with our solar wind hybrid system.
+          </p>
+          <div className="mt-6 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
+        </motion.div>
+
+        {/* Steps */}
+        <div className="relative">
+          {/* Vertical connector line (desktop) */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-20 -translate-x-1/2" aria-hidden="true" />
+
+          <motion.div
+            className="flex flex-col gap-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {steps.map((step, idx) => (
+              <motion.div
+                key={step.number}
+                variants={cardVariants}
+                className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+              >
+                {/* Content card */}
+                <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl flex-shrink-0">{step.icon}</span>
+                    <div>
+                      <p className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${step.color} bg-clip-text text-transparent mb-1`}>
+                        Step {step.number}
+                      </p>
+                      <h3 className="text-xl font-extrabold text-gray-900 dark:text-white mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Centre node */}
+                <div className="hidden lg:flex flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary items-center justify-center text-white font-extrabold text-lg shadow-lg z-10">
+                  {step.number}
+                </div>
+
+                {/* Spacer (mirrors content card on the other side) */}
+                <div className="flex-1 hidden lg:block" aria-hidden="true" />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}

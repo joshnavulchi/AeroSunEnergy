@@ -1,49 +1,56 @@
 const services = [
   {
-    emoji: '☀️',
-    title: 'Solar Energy Solutions',
+    emoji: '⚡',
+    title: '24/7 Continuous Power Generation',
     description:
-      'From residential rooftop panels to large commercial solar farms, we design, install, and maintain high-efficiency photovoltaic systems that slash your energy costs.',
-    color: 'from-yellow-400 to-orange-400',
-  },
-  {
-    emoji: '🌀',
-    title: '3-Blade Wind Turbines (HAWT)',
-    description:
-      'Classic horizontal-axis wind turbines engineered for high-wind sites. Our certified engineers assess wind potential and deliver optimized 3-blade systems for maximum power generation in open terrain and offshore environments.',
+      'Solar panels work at peak capacity during daylight hours while wind turbines generate power continuously — day and night, calm or stormy. Together, they eliminate energy gaps and ensure your supply never stops.',
     color: 'from-primary to-blue-400',
   },
   {
-    emoji: '🌸',
-    title: 'Flower Turbines',
+    emoji: '💰',
+    title: 'Significant Cost Savings',
     description:
-      'Innovative vertical-axis flower turbines with petal-shaped helical blades that capture wind from every direction. Ideal for urban rooftops, gardens, and low-noise environments where aesthetics and silent operation matter.',
-    color: 'from-pink-400 to-rose-400',
+      'Our hybrid solar wind energy systems can cut electricity bills by up to 80%. With government subsidies, net metering, and rapid ROI, switching to green energy has never made more financial sense.',
+    color: 'from-accent to-yellow-400',
   },
   {
-    emoji: '♻️',
-    title: 'Low-Wind VAWT (Savonius)',
+    emoji: '🌍',
+    title: 'Eco-Friendly Zero-Emission Power',
     description:
-      'Savonius and Darrieus vertical-axis turbines designed for minimal air-flow conditions. These self-starting rotors generate power even at wind speeds as low as 2 m/s, making them perfect for calm-wind regions and off-grid sites.',
+      'Every kilowatt from AeroSun replaces fossil-fuel electricity — reducing carbon emissions, improving local air quality, and contributing directly to India&apos;s renewable energy goals. Clean energy for a cleaner future.',
+    color: 'from-secondary to-teal-400',
+  },
+  {
+    emoji: '📡',
+    title: 'Smart IoT Monitoring',
+    description:
+      'Our smart energy systems come with real-time IoT dashboards so you can track solar output, wind generation, consumption, and savings from anywhere. Data-driven decisions, maximum efficiency.',
+    color: 'from-primary to-secondary',
+  },
+  {
+    emoji: '🔧',
+    title: 'Low Maintenance, High Reliability',
+    description:
+      'Engineered for durability, our systems require minimal upkeep. With self-starting wind rotors and weather-resistant solar panels, AeroSun installations run reliably in urban rooftops, rural fields, highways, and parks alike.',
     color: 'from-teal-400 to-cyan-400',
   },
   {
-    emoji: '⚡',
-    title: 'Hybrid Energy Systems',
+    emoji: '📐',
+    title: 'Efficient Use of Space',
     description:
-      'Combine solar and wind in a single integrated hybrid system for continuous power supply, even during low-sunlight or low-wind periods, with smart battery storage and IoT-enabled monitoring.',
-    color: 'from-secondary to-teal-400',
+      'Hybrid systems generate more energy per square metre than standalone solar or wind alone — ideal for space-constrained sites like urban rooftops, roadside infrastructure, and compact commercial plots.',
+    color: 'from-pink-400 to-rose-400',
   },
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">What We Offer</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Key Features &amp; Benefits</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-            Our Services
+            Why Hybrid Energy Changes Everything
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
         </div>
