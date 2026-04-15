@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 const features = [
   {
     icon: (
@@ -32,29 +36,46 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <span className="text-secondary font-semibold uppercase tracking-widest text-sm">Who We Are</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             About AeroSun Energy
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              AeroSun Energy is a leading renewable energy company based in India, dedicated to delivering world-class solar and wind energy solutions to homes, businesses, and industries. Founded with a vision to accelerate India&apos;s green energy transition, we combine cutting-edge technology with deep domain expertise.
+              AeroSun Energy is a leading renewable energy company that delivers world-class <strong>hybrid solar and wind energy solutions</strong> to homes, businesses, and industries. Our hybrid systems combine the best of both worlds — solar panels that harvest sunlight during the day and wind turbines that generate power around the clock — so you always have a reliable, uninterrupted electricity supply.
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-              From rooftop solar installations to large-scale wind farms, our team of certified engineers and energy consultants designs tailored systems that maximize energy output while minimizing environmental impact. We are committed to making clean energy accessible and affordable for all.
+              From rooftop installations to open commercial spaces and road-side deployments, our certified engineers design tailored hybrid systems that maximize energy output while minimizing environmental impact. We are committed to making clean energy accessible and affordable for all — urban and rural India alike.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+          >
             {features.map((f) => (
               <div
                 key={f.title}
-                className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow"
+                className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
               >
                 <div className="mb-4 p-3 rounded-full bg-white dark:bg-gray-700 shadow-sm">
                   {f.icon}
@@ -63,7 +84,7 @@ export default function About() {
                 <p className="text-sm text-gray-500 dark:text-gray-400">{f.desc}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,53 +1,61 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary via-blue-600 to-secondary overflow-hidden animate-fadeIn">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary via-blue-600 to-secondary overflow-hidden">
       {/* Background decorative circles */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl" aria-hidden="true" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl" aria-hidden="true" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
         {/* Text content */}
-        <div className="text-white z-10">
+        <motion.div
+          className="text-white z-10"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
           <span className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1 rounded-full mb-6 uppercase tracking-wide">
             Clean &amp; Renewable
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            Powering the Future with{' '}
-            <span className="text-accent">Sun &amp; Wind</span>
+            Power the Future with{' '}
+            <span className="text-accent">Hybrid Solar &amp; Wind Energy</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 mb-6 max-w-lg">
-            Clean, sustainable energy solutions for tomorrow. We harness the natural power of the sun and wind — from traditional three-blade turbines to innovative flower turbines and low-wind vertical-axis generators — to deliver affordable, reliable green energy across India.
+          <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-lg">
+            Smart, sustainable, and continuous electricity for roads, homes, and open spaces.
           </p>
-          {/* Turbine type badges */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            <span className="inline-flex items-center gap-1 bg-white/15 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
-              🌀 3-Blade HAWT
-            </span>
-            <span className="inline-flex items-center gap-1 bg-white/15 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
-              🌸 Flower Turbines
-            </span>
-            <span className="inline-flex items-center gap-1 bg-white/15 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
-              ♻️ Low-Wind VAWT
-            </span>
-          </div>
-          <div className="flex flex-wrap gap-4">
+          <motion.div
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+          >
             <a
-              href="#wind-generators"
-              className="inline-block bg-white text-primary font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-accent hover:text-white transition-colors duration-200"
+              href="#about"
+              className="inline-block bg-white text-primary font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-accent hover:text-white hover:scale-105 transition-all duration-200"
             >
-              Explore Turbines
+              Get Started
             </a>
             <a
               href="#contact"
-              className="inline-block border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+              className="inline-block border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-200"
             >
-              Contact Us
+              Request Installation
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* SVG Illustration – three wind generator types + solar panel */}
-        <div className="flex justify-center lg:justify-end z-10" aria-hidden="true">
+        <motion.div
+          className="flex justify-center lg:justify-end z-10"
+          aria-hidden="true"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: 'easeOut' }}
+        >
           <svg
             width="460"
             height="400"
@@ -148,7 +156,7 @@ export default function Hero() {
             <ellipse cx="175" cy="38" rx="24" ry="12" fill="white" opacity="0.18" />
             <ellipse cx="197" cy="30" rx="19" ry="10" fill="white" opacity="0.18" />
           </svg>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
