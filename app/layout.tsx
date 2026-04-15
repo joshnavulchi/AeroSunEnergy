@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: ['500', '700'],
 })
 
-const GTM_ID = 'PLB9S69G';
+const GTM_ID = 'GTM-PLB9S69G';
 const BING_SITE_VERIFICATION = 'CFCE648996D804079C4F28B5C09CE9D3';
 
 export const metadata: Metadata = {
