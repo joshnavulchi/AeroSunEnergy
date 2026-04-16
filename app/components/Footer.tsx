@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-slate-100 border-t-2 shadow-sm border-gray-200 text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -39,19 +39,19 @@ export default function Footer() {
               {/* <Image src="/images/logo-horizontal.png" alt="AeroSun Energy logo" width={180} height={60} priority /> */}
               <Logo />
             </div>
-            <p className="text-gray-700 text-sm mt-3">
+            <p className="text-gray-700 text-md mt-3">
               Delivering clean, reliable, and affordable renewable energy solutions across India.
             </p>
-            <p className="text-gray-700 text-sm mt-2">
+            <p className="text-gray-700 text-md mt-2">
               📧 customercare@aerosunenergy.in
             </p>
-            <p className="text-gray-700 text-sm mt-1">
+            <p className="text-gray-700 text-md mt-1">
               🌐 aerosunenergy.in
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="text-right">
+          <div className="md:text-right">
             <h3 className="text-black font-semibold text-lg mb-5">Quick Links</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
@@ -114,9 +114,9 @@ export default function Footer() {
               <Image
                 src="/images/qr-code.png"
                 alt="AeroSun Energy QR Code"
-                width={150}
-                height={150}
-                className="w-25 h-25"
+                width={200}
+                height={200}
+                className="w-50 h-50"
               />
               <p className="text-center text-md text-gray-600 mt-1 font-semibold">Scan</p>
             </div>
@@ -125,7 +125,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t-2 border-gray-200 py-6">
-        <p className="text-center text-gray-500 text-sm">
+        <p className="text-center text-gray-500 text-md">
           Vulchi Vijaya Kumar © 2026 AeroSun Energy. All rights reserved. |{' '}
           <a href="https://aerosunenergy.in" className="hover:text-primary transition-colors">
             aerosunenergy.in

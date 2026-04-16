@@ -44,14 +44,14 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary font-semibold uppercase tracking-widest text-sm">The Technology</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
+          <span className="text-secondary font-semibold uppercase tracking-widest text-md text-gray-900 dark:text-gray-100">The Technology</span>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
             About Our Hybrid Solar + Wind System
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-12 rounded-[2.25rem] border border-white/60 bg-white/75 p-6 shadow-[0_24px_90px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/65 lg:grid-cols-[0.95fr_1.05fr] lg:p-8">
+        <div className="grid grid-cols-1 gap-12 rounded-[2.25rem] md:border md:border-white/60 md:bg-white/75 md:p-3 shadow-[0_24px_90px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/65 lg:grid-cols-[0.95fr_1.05fr] lg:p-8">
           <motion.div
             className="rounded-[1.75rem] bg-slate-950 px-6 py-8 text-white shadow-2xl lg:px-8"
             initial={{ opacity: 0, x: -40 }}
@@ -59,7 +59,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-accent/90">Integrated Technology</p>
+            <p className="text-md font-semibold uppercase tracking-[0.32em] text-accent/90">Integrated Technology</p>
             <h3 className="mt-4 max-w-lg text-3xl font-bold leading-tight sm:text-4xl">
               A hybrid platform designed to keep producing when single-source systems slow down.
             </h3>
@@ -73,18 +73,18 @@ export default function About() {
               AeroSun Energy designs and installs tailored <strong>renewable energy solutions across India</strong> — for homes, businesses, public spaces, and large-scale infrastructure — making clean, affordable power accessible to everyone.
             </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid gap-4">
               <div className="rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur-md">
                 <p className="text-3xl font-bold text-accent">01</p>
-                <p className="mt-2 text-sm text-white/72">Dual-source generation that reduces idle periods.</p>
+                <p className="mt-2 text-md text-white/72">Dual-source generation that reduces idle periods.</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur-md">
                 <p className="text-3xl font-bold text-accent">02</p>
-                <p className="mt-2 text-sm text-white/72">Smart controls that balance solar, wind, and storage.</p>
+                <p className="mt-2 text-md text-white/72">Smart controls that balance solar, wind, and storage.</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur-md">
                 <p className="text-3xl font-bold text-accent">03</p>
-                <p className="mt-2 text-sm text-white/72">Scalable deployment from home rooftops to public assets.</p>
+                <p className="mt-2 text-md text-white/72">Scalable deployment from home rooftops to public assets.</p>
               </div>
             </div>
           </motion.div>
@@ -115,7 +115,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6">
               {features.map((f) => (
                 <div
                   key={f.title}
@@ -124,8 +124,8 @@ export default function About() {
                   <div className="mb-4 rounded-full bg-slate-50 p-3 shadow-sm dark:bg-slate-800">
                     {f.icon}
                   </div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2">{f.title}</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{f.desc}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{f.title}</h3>
+                  <p className="text-md text-gray-500 dark:text-gray-400">{f.desc}</p>
                 </div>
               ))}
             </div>

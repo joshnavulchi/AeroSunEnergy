@@ -48,7 +48,7 @@ export default function Services() {
     <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Key Features &amp; Benefits</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-md text-gray-600 dark:text-gray-900">Key Features &amp; Benefits</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             Why Hybrid Energy Changes Everything
           </h2>

@@ -25,10 +25,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-white/80 backdrop-blur-md sm:text-sm">
+          <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-white/80 backdrop-blur-md sm:text-md">
             Energy Infrastructure Reimagined
           </span>
-          <h1 className="max-w-3xl text-5xl font-bold leading-[0.94] sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-3xl leading-[0.94] sm:text-4xl lg:text-5xl">
             Built for the sun.
             <br />
             Tuned for the wind.
@@ -40,11 +40,11 @@ export default function Hero() {
           </p>
           <div className="mt-8 grid gap-3 sm:max-w-xl sm:grid-cols-2">
             {proofPoints.map((point) => (
-              <div key={point} className="rounded-2xl border border-white/14 bg-white/8 px-4 py-3 text-sm font-medium text-white/92 backdrop-blur-md">
+              <div key={point} className="rounded-2xl bg-white/8 px-4 py-3 text-md font-medium text-white/92 backdrop-blur-md">
                 {point}
               </div>
             ))}
-            <div className="rounded-2xl border border-accent/40 bg-accent/14 px-4 py-3 text-sm font-semibold text-accent backdrop-blur-md">
+            <div className="rounded-2xl bg-white/8 px-4 py-3 text-md font-semibold text-white/92 backdrop-blur-md">
               Up to 80% reduction in electricity bills
             </div>
           </div>
@@ -56,13 +56,13 @@ export default function Hero() {
           >
             <a
               href="#how-it-works"
-              className="inline-flex items-center rounded-full bg-accent px-8 py-3.5 text-sm font-bold text-slate-950 shadow-[0_20px_40px_rgba(251,192,45,0.22)] transition-transform duration-200 hover:scale-[1.02]"
+              className="inline-flex items-center rounded-full bg-accent px-8 py-3.5 text-md font-bold text-slate-200 shadow-[0_20px_40px_rgba(251,192,45,0.22)] transition-transform duration-200 hover:scale-[1.02]"
             >
               Explore the System
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-8 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/14"
+              className="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-8 py-3.5 text-md font-bold text-white backdrop-blur-md transition-colors duration-200 hover:bg-white/14"
             >
               Get a Free Quote
             </a>
@@ -70,20 +70,20 @@ export default function Hero() {
 
           <div className="mt-12 grid max-w-2xl grid-cols-2 gap-4 border-t border-white/12 pt-8 sm:grid-cols-4">
             <div>
-              <p className="text-3xl font-bold text-white">24/7</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/55">Power Availability</p>
+              <p className="text-3xl font-semibold text-white">24/7</p>
+              <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Power Availability</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">4-6y</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/55">Typical ROI Window</p>
+              <p className="text-3xl font-semibold text-white">4-6y</p>
+              <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Typical ROI Window</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">IoT</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/55">Live Monitoring</p>
+              <p className="text-3xl font-semibold text-white">IoT</p>
+              <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Live Monitoring</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">Multi-site</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/55">Deployment Types</p>
+              <p className="text-3xl font-semibold text-white">Multi-site</p>
+              <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Deployment Types</p>
             </div>
           </div>
         </motion.div>
@@ -103,30 +103,30 @@ export default function Hero() {
                 <span>Live Optimisation</span>
               </div>
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] sm:aspect-[5/4]">
-              <Image
-                src="/images/home-aerosunenergy.png"
-                alt="AeroSun Energy hybrid solar and wind installation"
-                fill
-                priority
-                sizes="(min-width: 1024px) 44vw, 92vw"
-                className="object-cover"
-              />
+                <Image
+                  src="/images/home-aerosunenergy.png"
+                  alt="AeroSun Energy hybrid solar and wind installation"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 44vw, 92vw"
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,12,24,0.06),rgba(4,12,24,0.26)_58%,rgba(4,12,24,0.64)_100%)]" aria-hidden="true" />
               </div>
               <div className="absolute bottom-6 left-6 right-6 z-10 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/16 bg-slate-950/55 p-4 text-white backdrop-blur-md">
-                  <p className="text-[11px] uppercase tracking-[0.28em] text-white/60">Primary Use</p>
-                  <p className="mt-2 text-lg font-bold">Residential to infrastructure-scale deployment</p>
+                  <p className="text-[12px] uppercase tracking-[0.28em] text-white/60">Primary Use</p>
+                  <p className="mt-2 text-md">Residential to infrastructure-scale deployment</p>
                 </div>
                 <div className="rounded-2xl border border-white/16 bg-white/12 p-4 text-white backdrop-blur-md">
-                  <p className="text-[11px] uppercase tracking-[0.28em] text-white/60">Performance Logic</p>
-                  <p className="mt-2 text-lg font-bold">Solar in daylight, wind beyond it</p>
+                  <p className="text-[12px] uppercase tracking-[0.28em] text-white/60">Performance Logic</p>
+                  <p className="mt-2 text-md">Solar in daylight, wind beyond it</p>
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-5 left-4 max-w-[230px] rounded-3xl border border-white/14 bg-white/10 px-5 py-4 text-white shadow-2xl backdrop-blur-xl sm:left-6">
-              <p className="text-[11px] uppercase tracking-[0.28em] text-white/65">Field Advantage</p>
-              <p className="mt-2 text-base font-bold leading-6">One system, multiple generation windows, minimal dead time.</p>
+            <div className="absolute -bottom-30 left-4 max-w-[230px] rounded-2xl border border-white/14 bg-white/10 px-5 py-4 text-white shadow-2xl backdrop-blur-xl sm:left-6">
+              <p className="text-[12px] uppercase tracking-[0.28em] text-white/65">Field Advantage</p>
+              <p className="mt-2 text-md leading-6">One system, multiple generation windows, minimal dead time.</p>
             </div>
           </div>
         </motion.div>
