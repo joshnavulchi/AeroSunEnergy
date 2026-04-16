@@ -18,8 +18,8 @@ export default function Logo() {
           <span className="text-3xl font-extrabold bg-clip-text bg-linear-to-r from-amber-600 via-rose-600 to-indigo-700 drop-shadow-xl text-transparent">Aero</span>
           <span className="text-3xl font-extrabold bg-clip-text bg-linear-to-r from-amber-600 via-rose-600 to-indigo-700 drop-shadow-xl text-transparent ml-1">Sun</span>
         </div>
-        <div className="inline-flex text-sm uppercase">-------- E n e r g y --------</div>
-        <div className="inline-flex text-xs">Power from Sun and Wind</div>
+        <div className="inline-flex text-md uppercase text-gray-900">-------- E n e r g y --------</div>
+        <div className="inline-flex text-xs text-gray-900">Power from Sun and Wind</div>
       </div>
     </a>
   )

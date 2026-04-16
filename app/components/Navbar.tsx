@@ -38,8 +38,8 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/55 bg-white/80 px-4 py-3 shadow-[0_18px_60px_rgba(15,23,42,0.14)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/75">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-white/55 bg-white/80 px-4 py-3 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/75">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <Logo />
 
@@ -50,7 +50,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-primary dark:text-slate-200 dark:hover:bg-slate-800"
+                className="rounded-full px-4 py-2 text-md font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-primary dark:text-slate-200 dark:hover:bg-slate-800"
               >
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
           </div>
           <a
             href="#contact"
-            className="rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white transition-transform duration-200 hover:scale-[1.03] hover:bg-primary dark:bg-accent dark:text-slate-950"
+            className="rounded-full bg-slate-950 px-5 py-2.5 text-md font-bold text-white transition-transform duration-200 hover:scale-[1.03] hover:bg-primary dark:bg-accent dark:text-slate-950"
           >
             Start a Project
           </a>
@@ -117,13 +117,13 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
-        <div className="mx-4 mt-3 rounded-3xl border border-white/60 bg-white/92 p-4 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/90 md:hidden sm:mx-6 lg:mx-8">
+        <div className="mx-4 mt-3 rounded-2xl border border-white/60 bg-white/92 p-4 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/90 md:hidden sm:mx-6 lg:mx-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+              className="block rounded-2xl px-4 py-3 text-md font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
             >
               {link.label}
             </a>
@@ -131,7 +131,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-3 block rounded-2xl bg-slate-950 px-4 py-3 text-center text-sm font-bold text-white dark:bg-accent dark:text-slate-950"
+            className="mt-3 block rounded-2xl bg-slate-950 px-4 py-3 text-center text-md font-bold text-white dark:bg-accent dark:text-slate-950"
           >
             Start a Project
           </a>

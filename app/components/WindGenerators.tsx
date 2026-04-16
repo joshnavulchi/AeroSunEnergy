@@ -65,7 +65,7 @@ export default function WindGenerators() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Our Technology</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-md text-gray-600 dark:text-gray-900">Our Technology</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             Wind Energy Generators
           </h2>
@@ -80,7 +80,7 @@ export default function WindGenerators() {
           {generators.map((gen, idx) => (
             <div
               key={gen.id}
-              className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-center bg-white dark:bg-gray-800 rounded-3xl shadow-md overflow-hidden`}
+              className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-center bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden`}
             >
               {/* Illustration panel */}
               <div className={`flex-shrink-0 flex items-center justify-center w-full lg:w-72 h-64 bg-gradient-to-br ${gen.accentFrom} ${gen.accentTo} bg-opacity-10 dark:bg-opacity-20`}>
@@ -101,13 +101,13 @@ export default function WindGenerators() {
                   {gen.badge}
                 </span>
                 <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-1">{gen.title}</h3>
-                <p className="text-sm font-medium text-primary mb-4">{gen.subtitle}</p>
+                <p className="text-md font-medium text-primary mb-4 text-gray-600 dark:text-gray-900">{gen.subtitle}</p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">{gen.description}</p>
 
                 {/* Key specs */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                   {gen.highlights.map((h) => (
-                    <li key={h} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                    <li key={h} className="flex items-start gap-2 text-md text-gray-700 dark:text-gray-300">
                       <svg className="h-4 w-4 mt-0.5 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -115,10 +115,9 @@ export default function WindGenerators() {
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="#contact"
-                  className={`inline-block bg-gradient-to-r ${gen.accentFrom} ${gen.accentTo} text-white font-bold px-6 py-2.5 rounded-lg shadow hover:opacity-90 transition-opacity text-sm`}
+                  className={`inline-block bg-gradient-to-r ${gen.accentFrom} ${gen.accentTo} text-white font-bold px-6 py-2.5 rounded-lg shadow hover:opacity-90 transition-opacity text-md`}
                 >
                   Get a Quote →
                 </a>

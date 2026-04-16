@@ -77,7 +77,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Simple Process</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-md text-gray-900 dark:text-white">Simple Process</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             How It Works
           </h2>
@@ -105,20 +105,20 @@ export default function HowItWorks() {
                 variants={cardVariants}
                 className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
               >
-                <div className="relative h-44 w-full overflow-hidden rounded-2xl mb-5">
+                <div className="relative h-60 md:h-120 w-full md:w-1/2 overflow-hidden rounded-2xl mb-5">
                   <Image
                     src={step.imageSrc}
                     alt={step.imageAlt}
                     fill
-                    sizes="(min-width: 1024px) 38vw, 92vw"
+                    sizes="(min-width: 768px) 19vw, 46vw"
                     className="object-cover"
                   />
                 </div>
                 {/* Content card */}
-                <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 hover:shadow-lg transition-shadow">
+                <div className="flex-1 bg-white w-full md:W-1/2 dark:bg-gray-800 rounded-2xl shadow-md p-8 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
                     <span className="text-3xl flex-shrink-0">{step.icon}</span>
-                    <div>
+                    <div className="w-3/4">
                       <p className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${step.color} bg-clip-text text-transparent mb-1`}>
                         Step {step.number}
                       </p>
@@ -130,15 +130,15 @@ export default function HowItWorks() {
                       </p>
                     </div>
                   </div>
-                </div>
 
-                {/* Centre node */}
-                <div className="hidden lg:flex flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary items-center justify-center text-white font-extrabold text-lg shadow-lg z-10">
-                  {step.number}
-                </div>
+                  {/* Centre node */}
+                  <div className="hidden lg:flex flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary items-center justify-center text-white font-extrabold text-lg shadow-lg z-10">
+                    {step.number}
+                  </div>
 
-                {/* Spacer (mirrors content card on the other side) */}
-                <div className="flex-1 hidden lg:block" aria-hidden="true" />
+                  {/* Spacer (mirrors content card on the other side) */}
+                  <div className="flex-1 hidden lg:block" aria-hidden="true" />
+                </div>
               </motion.div>
             ))}
           </motion.div>
