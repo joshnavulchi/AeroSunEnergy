@@ -57,7 +57,7 @@ export default function Features() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary font-semibold uppercase tracking-widest text-sm">What Sets Us Apart</span>
+          <span className="text-secondary font-semibold uppercase tracking-widest text-md text-gray-600 dark:text-white">What Sets Us Apart</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             Key Features
           </h2>
@@ -75,7 +75,7 @@ export default function Features() {
             <motion.div
               key={f.title}
               variants={cardVariants}
-              className="group p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="group p-8 rounded-2xl shadow-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white dark:bg-gray-700 shadow-sm">
                 {f.icon}

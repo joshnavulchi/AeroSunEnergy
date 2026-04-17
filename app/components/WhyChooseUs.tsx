@@ -47,8 +47,8 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary font-semibold uppercase tracking-widest text-sm">Our Advantages</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
+          <span className="text-secondary uppercase tracking-widest text-md text-gray-500 dark:text-white">Our Advantages</span>
+          <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-white">
             Why Choose AeroSun Energy
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
@@ -65,13 +65,13 @@ export default function WhyChooseUs() {
             <motion.div
               key={r.title}
               variants={cardVariants}
-              className="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="p-6 rounded-2xl shadow-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               <div className="mb-4 p-3 inline-block rounded-xl bg-gray-50 dark:bg-gray-700 shadow-sm">
                 {r.icon}
               </div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{r.title}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{r.desc}</p>
+              <p className="text-md text-gray-500 dark:text-gray-400 leading-relaxed">{r.desc}</p>
             </motion.div>
           ))}
         </motion.div>

@@ -55,7 +55,7 @@ export default function Benefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary font-semibold uppercase tracking-widest text-sm">Why Go Hybrid</span>
+          <span className="text-secondary font-semibold uppercase tracking-widest text-md text-gray-900 dark:text-white">Why Go Hybrid</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             Benefits
           </h2>
@@ -79,7 +79,7 @@ export default function Benefits() {
                 {b.icon}
               </div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{b.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm">{b.desc}</p>
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-md">{b.desc}</p>
             </motion.div>
           ))}
         </motion.div>
