@@ -1,10 +1,20 @@
 import type { Metadata } from 'next'
+import { Roboto } from 'next/font/google'
 import Script from 'next/script'
-import JsonLd from '@/components/JsonLd'
+import JsonLd from '@/app/components/JsonLd'
+
 import './globals.css'
 
-// Replace with your actual Google Tag Manager container ID
-const GTM_ID = 'GTM-XXXXXXX'
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: '--font-body',
+  weight: ['400'],
+  preload: true,
+  display: "swap" // Prevents layout shift from font loading
+});
+
+const GTM_ID = 'GTM-PLB9S69G';
+const BING_SITE_VERIFICATION = 'CFCE648996D804079C4F28B5C09CE9D3';
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +38,7 @@ export const metadata: Metadata = {
     'Savonius turbine',
     'clean energy India',
     'sustainable energy infrastructure',
+    'aero sun energy'
   ],
   metadataBase: new URL('https://aerosunenergy.in'),
   alternates: {
@@ -54,7 +65,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/logo-full.jpeg',
+        url: '/images/logo-full.png',
         width: 1200,
         height: 630,
         alt: 'AeroSun Energy – Solar & Wind Energy Solutions',
@@ -66,16 +77,15 @@ export const metadata: Metadata = {
     title: 'AeroSun Energy | Solar & Wind Energy Solutions in India',
     description:
       'Clean, affordable solar and wind energy solutions for homes, businesses, and industries across India.',
-    images: ['/logo-full.jpeg'],
+    images: ['/images/logo-full.png'],
   },
-  verification: {
-    // Replace with your actual Google Search Console verification code
-    google: 'REPLACE_WITH_GOOGLE_VERIFICATION_CODE',
-    other: {
-      // Replace with your actual Bing Webmaster Tools verification code
-      'msvalidate.01': 'REPLACE_WITH_BING_VERIFICATION_CODE',
-    },
-  },
+  verification: BING_SITE_VERIFICATION
+    ? {
+      other: {
+        'msvalidate.01': BING_SITE_VERIFICATION,
+      },
+    }
+    : undefined,
 }
 
 export default function RootLayout({
@@ -85,26 +95,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-        {/* Google Tag Manager (noscript fallback) */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+      <head>
+        {GTM_ID ? (
+          <Script
+            id="gtm-script"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`,
+            }}
           />
-        </noscript>
+        ) : null}
+      </head>
+      <body className={`${roboto.variable} bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100`}>
+        {GTM_ID ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        ) : null}
         <JsonLd />
         {children}
-        {/* Google Tag Manager */}
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`,
-          }}
-        />
       </body>
     </html>
   )
