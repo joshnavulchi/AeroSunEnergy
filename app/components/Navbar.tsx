@@ -84,7 +84,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={toggleDark}
-            className="p-2 rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
+            className="p-2 rounded-full shadow-2xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
             aria-label="Toggle dark mode"
           >
             {dark ? (
@@ -100,7 +100,7 @@ export default function Navbar() {
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 rounded-full shadow-2xl text-slate-700 hover:bg-slate-100 transition-colors dark:text-slate-100 dark:hover:bg-slate-500"
+            className="p-2 rounded-full text-slate-700 hover:bg-slate-100 transition-colors dark:text-slate-100 dark:hover:bg-slate-500"
             aria-label="Toggle menu"
           >
             {menuOpen ? (
