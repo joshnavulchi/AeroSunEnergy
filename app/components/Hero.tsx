@@ -30,11 +30,9 @@ export default function Hero() {
             Energy Infrastructure Reimagined
           </span>
           <h1 className="max-w-3xl text-4xl leading-[1.1] sm:text-4xl lg:text-5xl font-semibold">
-            Built for the sun.
+            Hybrid solar wind energy systems in India.
             <br />
-            Tuned for the wind.
-            <br />
-            <span className="text-accent">Ready for real India.</span>
+            Built for rooftops, roads, parks, and industry.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-6 text-white/82">
             AeroSun Energy designs hybrid solar and wind systems that stay productive beyond peak daylight. From rooftops and parks to highway corridors and industrial land, every installation is shaped for continuous output, lower operating cost, and cleaner infrastructure.
