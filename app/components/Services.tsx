@@ -1,12 +1,5 @@
 const services = [
   {
-    emoji: '⚡',
-    title: '24/7 Continuous Power Generation',
-    description:
-      'Solar panels work at peak capacity during daylight hours while wind turbines generate power continuously — day and night, calm or stormy. Together, they eliminate energy gaps and ensure your supply never stops.',
-    color: 'from-amber-400 to-rose-400',
-  },
-  {
     emoji: '💰',
     title: 'Significant Cost Savings',
     description:
@@ -43,6 +36,8 @@ const services = [
   },
 ]
 
+import Image from 'next/image'
+
 export default function Services() {
   return (
     <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900">
@@ -53,6 +48,33 @@ export default function Services() {
             Why Hybrid Energy Changes Everything
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
+        </div>
+
+        {/* Services Image */}
+        <div className="mb-16">
+          <div className="relative max-w-5xl mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 via-primary/20 to-accent/20 rounded-2xl blur-3xl" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/90 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-slate-950/90">
+              <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
+                Manufacturing Excellence
+              </div>
+              <div className="aspect-[16/9] overflow-hidden">
+                <Image
+                  src="/images/forming-aerosunenergy.png"
+                  alt="AeroSun Energy manufacturing facility showcasing precision forming and assembly of hybrid energy systems"
+                  fill
+                  sizes="(min-width: 1024px) 64rem, 92vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" aria-hidden="true" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p className="max-w-3xl text-lg font-semibold">
+                  Our state-of-the-art manufacturing processes ensure every component meets the highest standards of quality and durability, from turbine blades to solar panel integration.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Lightbulb, ShieldCheck, Layers, MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 const reasons = [
   {
@@ -52,6 +53,39 @@ export default function WhyChooseUs() {
             Why Choose AeroSun Energy
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
+        </motion.div>
+
+        {/* Why Choose Us Image */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <div className="relative max-w-5xl mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/20 to-secondary/20 rounded-2xl blur-3xl" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/90 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-slate-950/90">
+              <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
+                Future-Ready Innovation
+              </div>
+              <div className="aspect-[16/9] overflow-hidden">
+                <Image
+                  src="/images/future-aerosunenergy.png"
+                  alt="AeroSun Energy's vision for future renewable energy infrastructure - advanced hybrid systems powering smart cities"
+                  fill
+                  sizes="(min-width: 1024px) 64rem, 92vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" aria-hidden="true" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p className="max-w-3xl text-lg font-semibold">
+                  Our commitment to innovation drives us to continuously evolve our technology, ensuring our clients always have access to the most advanced and efficient renewable energy solutions available.
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
