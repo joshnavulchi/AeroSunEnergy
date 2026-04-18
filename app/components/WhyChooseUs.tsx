@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary uppercase tracking-widest text-md text-gray-500 dark:text-white">Our Advantages</span>
+          <span className="text-secondary uppercase tracking-widest text-md text-gray-900 dark:text-gray-100">Our Advantages</span>
           <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-white">
             Why Choose AeroSun Energy
           </h2>

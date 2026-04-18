@@ -75,7 +75,7 @@ export default function UseCases() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary uppercase tracking-widest text-md text-gray-500 dark:text-white">Where We Install</span>
+          <span className="text-secondary uppercase tracking-widest text-md text-gray-900 dark:text-gray-100">Where We Install</span>
           <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-white">
             Use Cases
           </h2>

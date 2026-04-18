@@ -44,7 +44,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary uppercase tracking-widest text-md text-gray-500 dark:text-gray-100">The Technology</span>
+          <span className="text-secondary uppercase tracking-widest text-md text-gray-900 dark:text-gray-300">The Technology</span>
           <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-gray-100">
             About Our Hybrid Solar + Wind System
           </h2>
