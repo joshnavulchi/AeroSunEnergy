@@ -101,7 +101,7 @@ export default function HowItWorks() {
               <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
                 Next-Gen Technology
               </div>
-              <div className="aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/nextgen-aerosunenergy.png"
                   alt="Next-generation hybrid energy technology by AeroSun - advanced systems for modern renewable infrastructure"

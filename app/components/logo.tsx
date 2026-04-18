@@ -11,8 +11,6 @@ export default function Logo() {
         width={80}
         height={80}
         priority
-        className="h-auto w-[80px]"
-        style={{ height: 'auto', width: '80px' }}
       />
       <div className="flex flex-col">
         <div className="flex items-center justify-center">

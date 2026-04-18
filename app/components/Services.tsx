@@ -58,7 +58,7 @@ export default function Services() {
               <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
                 Manufacturing Excellence
               </div>
-              <div className="aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/forming-aerosunenergy.png"
                   alt="AeroSun Energy manufacturing facility showcasing precision forming and assembly of hybrid energy systems"

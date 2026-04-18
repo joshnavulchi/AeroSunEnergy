@@ -95,7 +95,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${roboto.variable} bg-white text-gray-900 transition-colors duration-150 dark:bg-gray-950 dark:text-gray-100`}>
         {GTM_ID ? (
           <Script
             id="gtm-script"
@@ -120,8 +120,6 @@ export default function RootLayout({
             }
           })();`}
         </Script>
-      </head>
-      <body className={`${roboto.variable} bg-white text-gray-900 transition-colors duration-150 dark:bg-gray-950 dark:text-gray-100`}>
         {GTM_ID ? (
           <noscript>
             <iframe

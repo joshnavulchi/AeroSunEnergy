@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
               <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
                 Future-Ready Innovation
               </div>
-              <div className="aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/future-aerosunenergy.png"
                   alt="AeroSun Energy's vision for future renewable energy infrastructure - advanced hybrid systems powering smart cities"
