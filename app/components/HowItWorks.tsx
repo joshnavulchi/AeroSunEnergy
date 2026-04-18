@@ -68,7 +68,7 @@ const cardVariants = {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="how-it-works" className="py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -79,12 +79,12 @@ export default function HowItWorks() {
         >
           <span className="text-primary uppercase tracking-widest text-md text-gray-900 dark:text-gray-100">Simple Process</span>
           <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-white">
-            How It Works
+            How Hybrid Solar Wind Systems Work
           </h2>
           <p className="mt-4 text-md text-gray-900 dark:text-gray-100 max-w-3xl mx-auto">
             From site visit to 24/7 power generation — here&apos;s how we turn any location into a clean energy source with our solar wind hybrid system.
           </p>
-          <div className="mt-6 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
+          <div className="mt-6 mx-auto w-16 h-1 rounded-md bg-gradient-to-r from-primary to-secondary" />
         </motion.div>
 
         {/* Process Overview Image */}
@@ -95,18 +95,18 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className="relative max-w-6xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-2xl blur-3xl" aria-hidden="true" />
-            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/90 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-slate-950/90">
-              <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
+          <div className="relative max-w-7xl mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 rounded-md blur-3xl" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-md border border-white/20 bg-white/90 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-slate-950/90">
+              <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
                 Next-Gen Technology
               </div>
-              <div className="aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/nextgen-aerosunenergy.png"
                   alt="Next-generation hybrid energy technology by AeroSun - advanced systems for modern renewable infrastructure"
                   fill
-                  sizes="(min-width: 1024px) 72rem, 92vw"
+                  sizes="(min-width: 1024px) 80rem, 92vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" aria-hidden="true" />
@@ -138,17 +138,17 @@ export default function HowItWorks() {
                 variants={cardVariants}
                 className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
               >
-                <div className="relative h-60 md:h-120 w-full md:w-1/2 overflow-hidden rounded-2xl mb-5">
+                <div className="relative h-60 md:h-120 w-full md:w-1/2 overflow-hidden rounded-md mb-5">
                   <Image
                     src={step.imageSrc}
                     alt={step.imageAlt}
                     fill
-                    sizes="(min-width: 768px) 19vw, 46vw"
+                    sizes="(min-width: 768px) 42vw, 92vw"
                     className="object-cover"
                   />
                 </div>
                 {/* Content card */}
-                <div className="flex-1 bg-white w-full md:W-1/2 dark:bg-gray-800 rounded-2xl shadow-md p-8 hover:shadow-lg transition-shadow">
+                <div className="flex-1 bg-white w-full md:W-1/2 dark:bg-gray-800 rounded-md shadow-md p-8 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
                     <span className="text-3xl flex-shrink-0">{step.icon}</span>
                     <div className="w-3/4">
@@ -165,7 +165,7 @@ export default function HowItWorks() {
                   </div>
 
                   {/* Centre node */}
-                  <div className="flex flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary items-center justify-center text-white text-lg shadow-lg z-10">
+                  <div className="flex flex-shrink-0 w-14 h-14 rounded-md bg-gradient-to-br from-primary to-secondary items-center justify-center text-white text-lg shadow-lg z-10">
                     {step.number}
                   </div>
 

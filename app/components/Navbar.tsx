@@ -6,25 +6,18 @@ import Logo from './logo'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [dark, setDark] = useState(false)
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme')
-    if (stored === 'dark') {
-      document.documentElement.classList.add('dark')
-      setDark(true)
-    }
-  }, [])
+  const [dark, setDark] = useState(() => typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark')
 
   const toggleDark = () => {
     if (dark) {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('theme', 'light')
+      setDark(false)
     } else {
       document.documentElement.classList.add('dark')
       localStorage.setItem('theme', 'dark')
+      setDark(true)
     }
-    setDark(!dark)
   }
 
   const navLinks = [
@@ -38,11 +31,10 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-white/55 bg-white/25 px-4 py-3 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/75">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-white/55 bg-white/65 px-3 py-2 shadow-xl backdrop-blur-md dark:border-white/55 dark:bg-slate-950/65">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <Logo />
-
         {/* Desktop Links */}
         <div className="hidden items-center gap-3 md:flex">
           <div className="flex items-center rounded-md shadow-md border border-slate-200/80 bg-white/75 p-1 dark:border-slate-800 dark:bg-slate-900/80">
@@ -58,7 +50,7 @@ export default function Navbar() {
           </div>
           <Link
             href="#contact"
-            className="rounded-md shadow-md bg-slate-950 px-5 py-2.5 text-md text-white transition-transform duration-200 hover:scale-[1.03] hover:bg-primary dark:bg-accent dark:text-slate-950"
+            className="rounded-md shadow-md bg-slate-950 px-5 py-2.5 text-md text-white transition-transform duration-150 hover:scale-[1.03] hover:bg-primary dark:bg-accent dark:text-slate-950"
           >
             Start a Project
           </Link>
@@ -122,7 +114,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block px-4 py-3 text-md text-slate-700 transition-colors hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slat-500"
+              className="block px-4 py-3 text-md text-slate-700 transition-colors hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-500"
             >
               {link.label}
             </Link>
