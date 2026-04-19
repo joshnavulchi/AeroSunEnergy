@@ -1,0 +1,30 @@
+name: Create Development Branch
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  create-development-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Create development branch if it does not exist
+        run: |
+          if git ls-remote --exit-code --heads origin development; then
+            echo "Branch 'development' already exists. Skipping creation."
+          else
+            git checkout -b development
+            git push origin development
+            echo "Branch 'development' created from main."
+          fi
