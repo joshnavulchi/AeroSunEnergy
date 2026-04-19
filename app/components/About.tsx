@@ -74,15 +74,15 @@ export default function About() {
             </p>
 
             <div className="mt-8 grid gap-4">
-              <div className="rounded-md border border-white/12 bg-white/8 p-4 backdrop-blur-md">
+              <div className="rounded-md shadow-2xl border border-white/24 bg-white/24 p-4 backdrop-blur-md">
                 <p className="text-3xl font-bold text-accent">01</p>
                 <p className="mt-2 text-md text-white/72">Dual-source generation that reduces idle periods.</p>
               </div>
-              <div className="rounded-md border border-white/12 bg-white/8 p-4 backdrop-blur-md">
+              <div className="rounded-md shadow-2xl border border-white/24 bg-white/24 p-4 backdrop-blur-md">
                 <p className="text-3xl font-bold text-accent">02</p>
                 <p className="mt-2 text-md text-white/72">Smart controls that balance solar, wind, and storage.</p>
               </div>
-              <div className="rounded-md border border-white/12 bg-white/8 p-4 backdrop-blur-md">
+              <div className="rounded-md shadow-2xl border border-white/24 bg-white/24 p-4 backdrop-blur-md">
                 <p className="text-3xl font-bold text-accent">03</p>
                 <p className="mt-2 text-md text-white/72">Scalable deployment from home rooftops to public assets.</p>
               </div>

@@ -29,7 +29,7 @@ export default function Hero() {
           <span className="mb-6 inline-flex rounded-md shadow-md border border-white/24 bg-white/24 px-3 py-2 text-md uppercase tracking-[0.45em] text-white backdrop-blur-md">
             Energy Infrastructure Reimagined
           </span>
-          <h1 className="max-w-3xl text-4xl leading-[1.1] tracking-wide sm:text-4xl lg:text-5xl font-semibold">
+          <h1 className="max-w-3xl text-4xl leading-[1.1] tracking-[40px] sm:text-4xl lg:text-5xl font-semibold">
             Hybrid solar wind energy systems in India.
             <br />
             Built for rooftops, roads, parks, and industry.
@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
           <div className="mt-8 grid gap-3 sm:max-w-xl sm:grid-cols-2">
             {proofPoints.map((point) => (
-              <div key={point} className="rounded-md bg-white/8 px-4 py-3 text-md font-medium text-white/92 backdrop-blur-md">
+              <div key={point} className="rounded-md shadow-md bg-white/8 px-4 py-3 text-md font-medium text-white/92 backdrop-blur-md">
                 {point}
               </div>
             ))}

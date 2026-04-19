@@ -15,6 +15,7 @@ const useCases = [
       'Roads and highways are exposed to sunlight and wind 24 hours a day. AeroSun integrates solar panels into road surface barriers and wind turbines along medians and roadsides — turning every kilometre of highway into a green energy generator that powers streetlights, traffic systems, and EV charging stations.',
     points: ['Powers streetlights & signage', 'Supports EV charging infrastructure', 'Scalable across national highways', 'Supports smart city infrastructure'],
     color: 'from-primary to-blue-400',
+    cardBg: 'bg-blue-100/85 dark:bg-blue-950/45 border-blue-300 dark:border-blue-700',
   },
   {
     emoji: '🌳',
@@ -27,6 +28,7 @@ const useCases = [
       'Parks offer unobstructed sunlight and natural airflow. Our aesthetically designed flower turbines and solar canopies blend seamlessly into park landscapes, powering benches, Wi-Fi nodes, lighting, and event spaces — supporting sustainable urban infrastructure without disrupting the natural environment.',
     points: ['Aesthetic flower turbine designs', 'Powers park lighting & amenities', 'Silent, low-vibration operation', 'Ideal for urban and suburban parks'],
     color: 'from-secondary to-teal-400',
+    cardBg: 'bg-emerald-100/85 dark:bg-emerald-950/45 border-emerald-300 dark:border-emerald-700',
   },
   {
     emoji: '🏡',
@@ -39,6 +41,7 @@ const useCases = [
       'Our solar wind hybrid system for homes combines compact rooftop solar panels with low-wind VAWT turbines — delivering round-the-clock electricity. Homeowners can cut their bills drastically, store surplus energy, and even sell power back to the grid through net metering.',
     points: ['Up to 80% reduction in electricity bills', 'Net metering & grid export ready', 'Battery storage available', 'Suits urban apartments and bungalows'],
     color: 'from-accent to-yellow-400',
+    cardBg: 'bg-amber-100/85 dark:bg-amber-950/45 border-amber-300 dark:border-amber-700',
   },
   {
     emoji: '🏭',
@@ -51,6 +54,7 @@ const useCases = [
       'Open agricultural land, factory rooftops, warehouses, and commercial complexes represent ideal sites for large-scale hybrid deployments. AeroSun delivers scalable green energy infrastructure that offsets industrial power demands and accelerates compliance with sustainability targets.',
     points: ['Scalable from 10 kW to multi-MW', 'Reduces industrial power costs', 'Supports ESG & sustainability goals', 'Suitable for rural and urban commercial sites'],
     color: 'from-pink-400 to-rose-400',
+    cardBg: 'bg-purple-100/85 dark:bg-purple-950/45 border-purple-300 dark:border-purple-700',
   },
 ]
 
@@ -82,7 +86,7 @@ export default function UseCases() {
           <p className="mt-4 text-lg text-gray-900 dark:text-gray-100 max-w-3xl mx-auto">
             Our hybrid solar wind energy systems are engineered for diverse environments — from busy highways to quiet homes — bringing renewable energy solutions across India wherever they&apos;re needed most.
           </p>
-          <div className="mt-6 mx-auto w-16 h-1 rounded-md bg-gradient-to-r from-primary to-secondary" />
+          <div className="mt-6 mx-auto w-16 h-1 rounded-md bg-linear-to-r from-primary to-secondary" />
         </motion.div>
 
         <motion.div
@@ -96,11 +100,11 @@ export default function UseCases() {
             <motion.div
               key={uc.title}
               variants={cardVariants}
-              className={`group overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-[0_24px_90px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-150 hover:-translate-y-1 hover:shadow-[0_32px_110px_rgba(15,23,42,0.12)] dark:border-slate-700 dark:bg-slate-800`}
+              className={`group overflow-hidden rounded-4xl border shadow-[0_24px_90px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-150 hover:-translate-y-1 hover:shadow-[0_32px_110px_rgba(15,23,42,0.12)] ${uc.cardBg}`}
             >
               <div className={`grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={`relative min-h-[280px] ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className={`absolute inset-x-0 top-0 h-2 bg-gradient-to-r ${uc.color}`} />
+                <div className={`relative min-h-70 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className={`absolute inset-x-0 top-0 h-2 bg-linear-to-r ${uc.color}`} />
                   <Image
                     src={uc.imageSrc}
                     alt={uc.imageAlt}
