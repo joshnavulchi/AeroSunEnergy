@@ -66,7 +66,7 @@ export default function About() {
               across diverse Indian environments.
             </p>
 
-            <p className="text-xl font-medium text-green-900 underline">
+            <p className="inline-flex bg-orange-500 px-4 py-1 text-lg font-medium text-white">
               We don’t just build turbines. We create a future where every citizen can produce their own
               clean energy.
             </p>
@@ -80,29 +80,34 @@ export default function About() {
             {[
               {
                 title: "Sustainability",
-                desc: "Accelerating India’s transition to renewable energy by reducing carbon footprints through clean wind solutions.",
+                desc: "Accelerating India's transition to renewable energy by reducing carbon footprints through clean wind solutions.",
+                bg: "bg-blue-50 dark:bg-blue-900/20",
               },
               {
                 title: "Innovation",
                 desc: "Designing low-wind, smart, and efficient turbine technology tailored for real-world conditions.",
+                bg: "bg-green-50 dark:bg-green-900/20",
               },
               {
                 title: "Accessibility",
                 desc: "Making renewable energy affordable and easy to adopt for homes, businesses, and rural communities.",
+                bg: "bg-yellow-50 dark:bg-yellow-900/20",
               },
               {
                 title: "Empowerment",
                 desc: "Enabling energy independence and strengthening rural and urban economies alike.",
+                bg: "bg-purple-50 dark:bg-purple-900/20",
               },
               {
                 title: "Reliability",
                 desc: "Delivering quiet, durable, and low-maintenance systems that perform consistently over time.",
+                bg: "bg-pink-50 dark:bg-pink-900/20",
               },
             ].map((value) => (
-              <Card key={value.title}>
+              <Card key={value.title} className={value.bg}>
                 <CardContent className="space-y-2">
-                  <h4 className="text-lg font-semibold text-gray-900">{value.title}</h4>
-                  <p className="text-sm text-gray-600">{value.desc}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{value.title}</h4>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">{value.desc}</p>
                 </CardContent>
               </Card>
             ))}
