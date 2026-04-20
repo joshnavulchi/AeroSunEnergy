@@ -49,17 +49,6 @@ export default function Footer() {
             <p className="text-gray-700 text-md mt-1 dark:text-gray-300">
               🌐 aerosunenergy.in
             </p>
-            <div className="flex my-6">
-              <div className="relative rounded-full shadow-xl bg-linear-to-br from-green-100 via-white to-cyan-100 p-2 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 dark:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.2)]">
-                <Image
-                  src="/images/lord-shiva-aerosunenergy.png"
-                  alt="Lord Shiva"
-                  width={124}
-                  height={124}
-                  className="h-32 w-32 rounded-full object-contain"
-                />
-              </div>
-            </div>
           </div>
 
           {/* Navigation */}
