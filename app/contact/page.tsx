@@ -17,7 +17,7 @@ export default function ContactPage() {
 
       <section className="pt-32 pb-24 bg-white dark:bg-gray-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-secondary uppercase tracking-widest text-md text-gray-500 dark:text-gray-400">Get In Touch</span>
+          <span className="text-secondary uppercase tracking-widest text-lg text-gray-500 dark:text-gray-400">Get In Touch</span>
           <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
             Contact AeroSun Energy
           </h1>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   height={120}
                 />
               </div>
-              <p className="text-md text-gray-600 dark:text-gray-400 font-semibold">Scan to visit</p>
+              <p className="text-lg text-gray-600 dark:text-gray-400 font-semibold">Scan to visit</p>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
           <div className="mt-12">
             <a
               href="mailto:customercare@aerosunenergy.in"
-              className="inline-flex items-center rounded-full bg-slate-950 px-8 py-3.5 text-md font-bold text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-primary dark:bg-accent dark:text-slate-950"
+              className="inline-flex items-center rounded-full bg-slate-950 px-8 py-3.5 text-lg font-bold text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-primary dark:bg-accent dark:text-slate-950"
             >
               Request a Free Quote
             </a>

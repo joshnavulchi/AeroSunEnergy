@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-transparent" aria-hidden="true" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="max-w-3xl text-md">
+                <p className="max-w-3xl text-lg">
                   Our commitment to innovation drives us to continuously evolve our technology, ensuring our clients always have access to the most advanced and efficient renewable energy solutions available.
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function WhyChooseUs() {
                 {r.icon}
               </div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">{r.title}</h3>
-              <p className="text-md text-gray-500 dark:text-gray-400 leading-relaxed">{r.desc}</p>
+              <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">{r.desc}</p>
             </motion.div>
           ))}
         </motion.div>

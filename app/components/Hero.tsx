@@ -12,7 +12,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative flex min-h-screen items-center bg-[#06111d] pt-10 sm:pt-6 md:pt-20 text-white overflow-hidden">
+    <section className="relative flex min-h-screen items-center bg-[#06111d] text-white overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(30,136,229,0.42),transparent_30%),radial-gradient(circle_at_78%_18%,rgba(251,192,45,0.28),transparent_18%),linear-gradient(135deg,#071321_0%,#0f3254_54%,#0d5a36_100%)]" aria-hidden="true" />
       <div className="absolute inset-y-0 right-0 hidden w-[42%] border-l border-white/10 bg-white/5 lg:block" aria-hidden="true" />
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" aria-hidden="true" />
@@ -26,7 +26,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <span className="mb-6 inline-flex rounded-md shadow-md border border-white/24 bg-white/24 px-3 py-2 text-md uppercase tracking-[0.45em] text-white backdrop-blur-md">
+          <span className="mb-6 inline-flex rounded-md shadow-md border border-white/24 bg-white/24 px-3 py-2 text-lg uppercase tracking-[0.45em] text-white backdrop-blur-md">
             Energy Infrastructure Reimagined
           </span>
           <h1 className="max-w-3xl text-4xl leading-[1.1] tracking-[0.04em]! sm:text-4xl lg:text-5xl font-semibold">
@@ -39,11 +39,11 @@ export default function Hero() {
           </p>
           <div className="mt-8 grid gap-3 sm:max-w-xl sm:grid-cols-2">
             {proofPoints.map((point) => (
-              <div key={point} className="rounded-md shadow-md bg-white/8 px-4 py-3 text-md font-medium text-white/92 backdrop-blur-md">
+              <div key={point} className="rounded-md shadow-md bg-white/8 px-4 py-3 text-lg font-medium text-white/92 backdrop-blur-md">
                 {point}
               </div>
             ))}
-            <div className="rounded-md bg-white/8 px-4 py-3 text-md text-white/92 backdrop-blur-md">
+            <div className="rounded-md bg-white/8 px-4 py-3 text-lg text-white/92 backdrop-blur-md">
               Up to 80% reduction in electricity bills
             </div>
           </div>
@@ -55,13 +55,13 @@ export default function Hero() {
           >
             <Link
               href="#how-it-works"
-              className="inline-flex items-center rounded-md bg-accent px-8 py-3.5 text-md text-slate-200 shadow-[0_20px_40px_rgba(251,192,45,0.22)] transition-transform duration-150 hover:scale-[1.02] opacity-65 pointer-events-none"
+              className="inline-flex items-center rounded-md bg-accent px-8 py-3.5 text-lg text-slate-200 shadow-[0_20px_40px_rgba(251,192,45,0.22)] transition-transform duration-150 hover:scale-[1.02] opacity-65 pointer-events-none"
             >
               Explore the System
             </Link>
             <Link
               href="#contact"
-              className="inline-flex items-center rounded-md border border-white/25 bg-white/8 px-8 py-3.5 text-md text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/14 opacity-65 pointer-events-none"
+              className="inline-flex items-center rounded-md border border-white/25 bg-white/8 px-8 py-3.5 text-lg text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/14 opacity-65 pointer-events-none"
             >
               Get a Free Quote
             </Link>
@@ -115,18 +115,18 @@ export default function Hero() {
               <div className="absolute bottom-35 md:bottom-30 left-6 right-6 z-10 grid gap-2 sm:grid-cols-2">
                 <div className="rounded-md border border-white/16 bg-slate-950/55 p-4 text-white backdrop-blur-md">
                   <p className="text-[12px] uppercase tracking-[0.28em] text-white/60">Primary Use</p>
-                  <p className="mt-2 text-md">Residential to infrastructure-scale deployment</p>
+                  <p className="mt-2 text-lg">Residential to infrastructure-scale deployment</p>
                 </div>
                 <div className="rounded-md border border-white/16 bg-white/12 p-4 text-white backdrop-blur-md">
                   <p className="text-[12px] uppercase tracking-[0.28em] text-white/60">Performance Logic</p>
-                  <p className="mt-2 text-md">Solar in daylight, wind beyond it</p>
+                  <p className="mt-2 text-lg">Solar in daylight, wind beyond it</p>
                 </div>
               </div>
             </div>
             <div className="absolute bottom-6 left-6 right-6 z-10 grid">
               <div className="rounded-md border border-white/16 bg-slate-950/55 p-4 text-white backdrop-blur-md">
                 <p className="text-[12px] uppercase tracking-[0.28em] text-white/65">Field Advantage</p>
-                <p className="mt-2 text-md leading-6">One system, multiple generation windows, minimal dead time.</p>
+                <p className="mt-2 text-lg leading-6">One system, multiple generation windows, minimal dead time.</p>
               </div>
             </div>
           </div>

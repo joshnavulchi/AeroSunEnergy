@@ -69,7 +69,7 @@ export default function Features() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-secondary font-semibold uppercase tracking-widest text-md text-gray-600 dark:text-white">What Sets Us Apart</span>
+          <span className="text-secondary font-semibold uppercase tracking-widest text-lg text-gray-600 dark:text-white">What Sets Us Apart</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
             Hybrid Solar Wind System Features
           </h2>

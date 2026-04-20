@@ -92,11 +92,11 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-primary uppercase tracking-widest text-md text-gray-900 dark:text-gray-100">Simple Process</span>
+          <span className="text-primary uppercase tracking-widest text-lg text-gray-900 dark:text-gray-100">Simple Process</span>
           <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-white">
             How Hybrid Solar Wind Systems Work
           </h2>
-          <p className="mt-4 text-md text-gray-900 dark:text-gray-100 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-gray-900 dark:text-gray-100 max-w-3xl mx-auto">
             From site visit to 24/7 power generation — here&apos;s how we turn any location into a clean energy source with our solar wind hybrid system.
           </p>
           <div className="mt-6 mx-auto w-16 h-1 rounded-md bg-gradient-to-r from-primary to-secondary" />
@@ -167,7 +167,7 @@ export default function HowItWorks() {
                   <div className="flex items-start gap-4">
                     <span className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md text-3xl shadow-sm ${step.iconBg}`}>{step.icon}</span>
                     <div className="w-3/4">
-                      <p className={`text-md uppercase tracking-widest mb-1`}>
+                      <p className={`text-lg uppercase tracking-widest mb-1`}>
                         Step {step.number}
                       </p>
                       <h3 className="text-xl font-extrabold text-gray-900 dark:text-gray-100 mb-3">

@@ -55,7 +55,7 @@ export default function Services() {
     <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary font-semibold uppercase tracking-widest text-md text-gray-600 dark:text-gray-900">Key Features &amp; Benefits</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-lg text-gray-600 dark:text-gray-900">Key Features &amp; Benefits</span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
             Hybrid Energy Solutions for Homes and Businesses
           </h2>
@@ -81,7 +81,7 @@ export default function Services() {
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-transparent" aria-hidden="true" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="max-w-3xl text-md">
+                <p className="max-w-3xl text-lg">
                   Our state-of-the-art manufacturing processes ensure every component meets the highest standards of quality and durability, from turbine blades to solar panel integration.
                 </p>
               </div>
