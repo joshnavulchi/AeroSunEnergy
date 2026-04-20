@@ -73,11 +73,11 @@ export default function Hero() {
               <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Power Availability</p>
             </div>
             <div>
-              <p className="text-3xl text-white">4-6y</p>
+              <p className="text-3xl text-white">4-6 years</p>
               <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Typical ROI Window</p>
             </div>
             <div>
-              <p className="text-3xl text-white">IoT</p>
+              <p className="text-3xl text-white">IoT App</p>
               <p className="mt-2 text-sm uppercase tracking-[0.24em] text-white/55">Live Monitoring</p>
             </div>
             <div>
@@ -126,7 +126,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,12,24,0.06),rgba(4,12,24,0.26)_58%,rgba(4,12,24,0.64)_100%)]" aria-hidden="true" />
               </div>
-              <div className="absolute bottom-35 md:bottom-30 left-6 right-6 z-10 grid gap-2 sm:grid-cols-2">
+              <div className="absolute bottom-35 left-6 right-6 z-10 grid gap-2 sm:grid-cols-2">
                 <div className="rounded-md border border-white/16 bg-slate-950/55 p-4 text-white backdrop-blur-md">
                   <p className="text-[12px] uppercase tracking-[0.28em] text-white/60">Primary Use</p>
                   <p className="mt-2 text-lg">Residential to infrastructure-scale deployment</p>
