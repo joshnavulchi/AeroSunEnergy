@@ -96,7 +96,7 @@ export default function Hero() {
         >
           <div className="relative w-full max-w-3xl">
             <div className="flex items-center justify-center pb-12">
-              <div className="relative rounded-full shadow-xl bg-linear-to-br from-green-100 via-white to-cyan-100 p-2 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 dark:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.2)]">
+              <div className="relative rounded-full shadow-xl bg-linear-to-br from-green-100 via-white to-cyan-100 p-2 animate-spin dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 dark:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.2)]">
                 <Image
                   src="/images/lord-shiva-aerosunenergy.png"
                   alt="Lord Shiva"

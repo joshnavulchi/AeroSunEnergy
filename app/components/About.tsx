@@ -42,11 +42,11 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 overflow-hidden">
+    <section id="about" className="py-24 bg-white dark:bg-gray-950 overflow-hidden">
       {/* About Section */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">
-        <Card className="rounded-2xl shadow-md">
-          <CardContent className="p-8 space-y-6">
+        <Card>
+          <CardContent className="space-y-6">
             <h2 className="text-xl font-bold">
               <span className="text-3xl ml-1 font-semibold bg-clip-text bg-linear-to-r from-blue-800 via-blue-700 to-blue-600 drop-shadow-xl text-transparent tracking-wider">Aero</span>
               <span className="text-3xl ml-1 font-semibold bg-clip-text bg-linear-to-r from-green-800 via-green-700 to-green-600 drop-shadow-xl text-transparent tracking-wider">Sun</span>
@@ -99,8 +99,8 @@ export default function About() {
                 desc: "Delivering quiet, durable, and low-maintenance systems that perform consistently over time.",
               },
             ].map((value) => (
-              <Card key={value.title} className="rounded-2xl shadow-sm">
-                <CardContent className="p-6 space-y-2">
+              <Card key={value.title}>
+                <CardContent className="space-y-2">
                   <h4 className="text-lg font-semibold text-gray-900">{value.title}</h4>
                   <p className="text-sm text-gray-600">{value.desc}</p>
                 </CardContent>
@@ -118,7 +118,7 @@ export default function About() {
           transition={{ duration: 0.7 }}
         >
           <span className="text-secondary uppercase tracking-widest text-lg text-gray-900 dark:text-white">The Technology</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 dark:text-white">
+          <h2 className="mt-2 text-3xl sm:text-4xl text-gray-900 dark:text-white">
             Hybrid Solar and Wind Energy System Overview
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-md bg-linear-to-r from-primary to-secondary" />

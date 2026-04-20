@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Card, CardContent } from './Card'
 
 const services = [
   {
@@ -52,7 +53,7 @@ import Image from 'next/image'
 
 export default function Services() {
   return (
-    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
+    <section id="services" className="py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-primary font-semibold uppercase tracking-widest text-lg text-gray-600 dark:text-gray-900">Key Features &amp; Benefits</span>
@@ -91,12 +92,12 @@ export default function Services() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div
+            <Card
               key={service.title}
-              className={`group overflow-hidden rounded-md shadow-md border transition-all duration-150 hover:scale-105 hover:shadow-xl ${service.cardBg}`}
+              className={`group transition-all duration-150 hover:scale-105 hover:shadow-xl ${service.cardBg}`}
             >
               <div className={`h-2 bg-linear-to-r ${service.color}`} />
-              <div className="p-8">
+              <CardContent>
                 <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl p-1 text-2xl shadow-xl ${service.iconBg}`}>{service.emoji}</div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
                   {service.title}
@@ -110,8 +111,8 @@ export default function Services() {
                 >
                   Learn more →
                 </Link>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
