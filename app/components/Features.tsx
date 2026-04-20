@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Clock, GitMerge, Wrench, Layers, Leaf, MapPin } from 'lucide-react'
+import { Card, CardContent } from './Card'
 
 const features = [
   {
@@ -87,13 +88,16 @@ export default function Features() {
             <motion.div
               key={f.title}
               variants={cardVariants}
-              className={`group rounded-md border p-8 shadow-2xl transition-all duration-150 hover:scale-105 hover:shadow-lg ${f.cardBg}`}
             >
-              <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl shadow-sm ${f.iconBg}`}>
-                {f.icon}
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">{f.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{f.desc}</p>
+              <Card className={`group transition-all duration-150 hover:scale-105 ${f.cardBg}`}>
+                <CardContent>
+                  <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl shadow-sm ${f.iconBg}`}>
+                    {f.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">{f.title}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{f.desc}</p>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </motion.div>

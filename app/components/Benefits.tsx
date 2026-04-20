@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { TrendingDown, Globe, ShieldCheck, Infinity } from 'lucide-react'
 import Image from 'next/image'
+import { Card, CardContent } from './Card'
 
 const benefits = [
   {
@@ -107,13 +108,16 @@ export default function Benefits() {
             <motion.div
               key={b.title}
               variants={cardVariants}
-              className={`p-8 rounded-md shadow-md border ${b.bg} ${b.border} hover:shadow-lg hover:scale-105 transition-all duration-150`}
             >
-              <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white dark:bg-gray-700 shadow-sm">
-                {b.icon}
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">{b.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-lg">{b.desc}</p>
+              <Card className={`hover:shadow-lg hover:scale-105 transition-all duration-150 ${b.bg} ${b.border}`}>
+                <CardContent>
+                  <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white dark:bg-gray-700 shadow-sm">
+                    {b.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">{b.title}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-lg">{b.desc}</p>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </motion.div>
