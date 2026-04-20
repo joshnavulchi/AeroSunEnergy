@@ -35,13 +35,13 @@ export default function Navbar() {
   }
 
   const navLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'How It Works', href: '/how-it-works' },
-    { label: 'Features', href: '/features' },
-    { label: 'Use Cases', href: '/use-cases' },
-    { label: 'Why Us', href: '/why-us' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Home', href: '#hero' },
+    { label: 'About', href: '#about' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Features', href: '#features' },
+    { label: 'Use Cases', href: '#use-cases' },
+    { label: 'Why Us', href: '#why-us' },
+    { label: 'Contact', href: '#contact' },
   ]
 
   return (
