@@ -55,7 +55,7 @@ export default function About() {
 
             {/* Founder Image */}
             <motion.div
-              className="relative flex flex-col items-center lg:flex-row lg:items-center lg:justify-start gap-8 px-16 py-6"
+              className="w-full relative flex flex-col items-center lg:flex-row gap-8 md:px-16 md:py-6"
               initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
               whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
               viewport={{ once: true }}
@@ -151,7 +151,7 @@ export default function About() {
 
               <div className="px-6 text-center lg:text-left relative z-10 lg:flex-1">
                 <motion.h3
-                  className="max-w-3xl mx-auto text-2xl font-medium text-gray-900 dark:text-white mb-1"
+                  className="text-2xl font-medium text-gray-900 dark:text-white mb-1"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
