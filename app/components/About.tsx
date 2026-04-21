@@ -95,10 +95,10 @@ export default function About() {
               <div className="relative group">
                 {/* Hexagonal Frame */}
                 <div className="absolute inset-0 transform rotate-30 scale-110">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/20 rounded-lg blur-sm animate-pulse"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/20 rounded-lg blur-sm"></div>
                 </div>
                 <div className="absolute inset-0 transform rotate-30 scale-105">
-                  <div className="w-full h-full border-2 border-primary/40 rounded-lg"></div>
+                  <div className="w-full h-full border-2 border-primary/40 rounded-lg animate-square-box"></div>
                 </div>
 
                 {/* Main Image Container */}
@@ -122,27 +122,27 @@ export default function About() {
 
                 {/* Turbine Blade Accents */}
                 <motion.div
-                  className="absolute -top-2 -right-2 w-6 h-6 text-accent"
+                  className="absolute -top-3 -right-3 w-10 h-10 text-accent"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                 >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
+                  <svg viewBox="0 0 24 24" fill="purple">
                     <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" />
                   </svg>
                 </motion.div>
                 <motion.div
-                  className="absolute -bottom-1 -left-1 w-4 h-4 text-secondary opacity-60"
+                  className="absolute -bottom-2 -left-2 w-6 h-6 text-secondary"
                   animate={{ rotate: -360 }}
                   transition={{ duration: 6, repeat: Infinity, ease: "linear", delay: 1 }}
                 >
-                  <svg viewBox="0 0 24 24" fill="currentColor">
+                  <svg viewBox="0 0 24 24" fill="blue">
                     <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" />
                   </svg>
                 </motion.div>
 
                 {/* Achievement Badge */}
-                <div className="absolute bottom-2 right-2 bg-gradient-to-br from-accent to-primary text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg border-2 border-white dark:border-gray-800">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <div className="absolute bottom-2 right-2 rounded-full w-8 h-8 flex items-center justify-center border-2 border-green-500">
+                  <svg className="w-4 h-4" fill="#00c758" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 </div>
