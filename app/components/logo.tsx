@@ -9,7 +9,7 @@ export default function Logo({ size = 'default' }: LogoProps) {
   const isFooter = size === 'footer'
 
   return (
-    <Link href="#" className={`relative flex items-center`}>
+    <Link href="#" title="Go to AeroSun Energy homepage" aria-label="AeroSun Energy logo - go to homepage" data-logo="brand" className={`relative flex items-center`}>
       <Image
         src="/images/logo-aerosunenergy.png"
         alt="AeroSun Energy logo"
@@ -17,6 +17,7 @@ export default function Logo({ size = 'default' }: LogoProps) {
         height={isFooter ? 112 : 96}
         className={isFooter ? 'h-auto w-28' : 'h-auto w-24'}
         priority
+        loading="eager"
       />
       <div className="flex flex-col items-center justify-center text-center">
         <div className="flex items-center justify-center">

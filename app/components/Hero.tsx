@@ -55,12 +55,18 @@ export default function Hero() {
           >
             <Link
               href="#how-it-works"
+              title="Learn how AeroSun Energy hybrid systems work"
+              aria-label="Explore the AeroSun Energy system details"
+              data-section="how-it-works"
               className="inline-flex items-center rounded-md bg-accent px-8 py-3.5 text-lg text-slate-200 shadow-[0_20px_40px_rgba(251,192,45,0.22)] transition-transform duration-150 hover:scale-[1.02] opacity-65 pointer-events-none"
             >
               Explore the System
             </Link>
             <Link
               href="#contact"
+              title="Get a free quote for AeroSun Energy systems"
+              aria-label="Request a free quote from AeroSun Energy"
+              data-section="contact"
               className="inline-flex items-center rounded-md border border-white/25 bg-white/8 px-8 py-3.5 text-lg text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/14 opacity-65 pointer-events-none"
             >
               Get a Free Quote
@@ -95,20 +101,6 @@ export default function Hero() {
           transition={{ duration: 0.2, delay: 0.05, ease: 'easeOut' }}
         >
           <div className="relative w-full max-w-3xl">
-            <div className="flex items-center justify-center my-8">
-              <div className="relative rounded-full shadow-xl bg-linear-to-br from-green-50 via-white to-cyan-50 p-2 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 dark:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.2)]">
-                <div className="absolute inset-0 rounded-full border-2 border-green-300/50 animate-rise-glow"></div>
-                <div className="absolute inset-0 rounded-full border-2 border-blue-300/30 animate-rise-glow" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute inset-0 rounded-full border-2 border-purple-300/20 animate-rise-glow" style={{ animationDelay: '1s' }}></div>
-                <Image
-                  src="/images/lord-shiva-aerosunenergy.png"
-                  alt="Lord Shiva"
-                  width={128}
-                  height={128}
-                  className="h-32 w-32 object-contain relative z-10 brightness-90"
-                />
-              </div>
-            </div>
             <div className="absolute inset-8 rounded-[2.5rem] bg-accent/20 blur-3xl" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/16 bg-white/8 p-3 shadow-[0_40px_120px_rgba(3,8,18,0.4)] backdrop-blur-sm">
               <div className="absolute left-5 right-5 top-5 z-10 flex items-center justify-between rounded-md border border-white/16 bg-slate-950/35 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/75 backdrop-blur-md">
@@ -121,6 +113,9 @@ export default function Hero() {
                   alt="AeroSun Energy hybrid solar and wind installation"
                   fill
                   priority
+                  loading="eager"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+IRjWjBqO6O2mhP//Z"
                   sizes="(min-width: 1024px) 52vw, 92vw"
                   className="object-cover"
                 />
