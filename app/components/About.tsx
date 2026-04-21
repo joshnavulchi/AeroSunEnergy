@@ -55,7 +55,7 @@ export default function About() {
 
             {/* Founder Image */}
             <motion.div
-              className="relative flex flex-col items-center lg:flex-row lg:items-center lg:justify-start gap-8 px-16 py-6"
+              className="w-full relative flex flex-col items-center lg:flex-row gap-8 md:px-16 md:py-6"
               initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
               whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
               viewport={{ once: true }}
