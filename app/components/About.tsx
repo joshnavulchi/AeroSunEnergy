@@ -147,8 +147,8 @@ export default function About() {
                 </motion.div>
 
                 {/* Achievement Badge */}
-                <div className="absolute bottom-2 right-2 rounded-full w-8 h-8 flex items-center justify-center border-2 border-green-500">
-                  <svg className="w-4 h-4" fill="#00c758" viewBox="0 0 20 20">
+                <div className="absolute bottom-2 right-2 rounded-full w-8 h-8 flex items-center justify-center border-2 border-gray-100">
+                  <svg className="w-4 h-4" fill="#fef9c2" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -185,16 +185,19 @@ export default function About() {
               </div>
 
               <div className="flex items-center mb-12">
-                <div className="relative rounded-full shadow-2xl bg-linear-to-br from-green-50 via-white to-cyan-50 p-2 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 dark:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.2)]">
+                <div className="relative h-40 w-40 rounded-full bg-white p-2 shadow-2xl backdrop-blur-sm dark:bg-white dark:shadow-[0_30px_80px_-40px_rgba(16,185,129,0.2)]">
                   <div className="absolute inset-0 rounded-full border-5 border-green-300 animate-rise-glow"></div>
                   <div className="absolute inset-0 rounded-full border-4 border-blue-300 animate-rise-glow" style={{ animationDelay: '0.5s' }}></div>
                   <div className="absolute inset-0 rounded-full border-3 border-purple-300 animate-rise-glow" style={{ animationDelay: '1s' }}></div>
                   <Image
                     src="/images/lord-shiva-aerosunenergy.png"
                     alt="Lord Shiva"
-                    width={128}
-                    height={129}
-                    className="h-32 w-32 object-cover rounded-full overflow-hidden relative z-10"
+                    fill
+                    sizes="160px"
+                    className="relative z-10 rounded-full object-contain p-2"
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+IRjWjBqO6O2mhP//Z"
                   />
                 </div>
               </div>
