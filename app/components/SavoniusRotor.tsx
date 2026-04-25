@@ -21,7 +21,7 @@ export default function SavoniusRotor() {
       </div>
 
       {/* Content Grid */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 items-center">
 
         {/* Image */}
         <div className="relative w-full h-75 md:h-100">
