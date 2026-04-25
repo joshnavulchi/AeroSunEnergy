@@ -104,7 +104,7 @@ export default function UseCases() {
                     title={u.discussTitle}
                     aria-label={u.discussAriaLabel}
                     data-cta="discuss-deployment"
-                    className="inline-flex mt-8 items-center rounded-md bg-slate-950 px-6 py-3 text-lg text-white transition-colors hover:bg-primary dark:bg-accent dark:text-slate-950"
+                    className="inline-flex mt-8 items-center rounded-md bg-slate-950 px-6 py-3 text-lg text-white transition-colors hover:bg-primary dark:bg-accent dark:text-gray-100"
                   >
                     {u.discussDeployment}
                   </Link>

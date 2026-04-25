@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" aria-hidden="true" />
       <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:88px_88px]" aria-hidden="true" />
 
-      <div className="relative grid w-full grid-cols-1 items-center gap-7 px-6 py-18 sm:px-3 lg:grid-cols-[1.08fr_0.92fr] lg:px-12">
+      <div className="relative grid w-full grid-cols-1 items-center gap-6 px-6 py-18 sm:px-3 lg:grid-cols-[1.08fr_0.92fr] lg:px-12">
         {/* Text content */}
         <motion.div
           className="z-10"
