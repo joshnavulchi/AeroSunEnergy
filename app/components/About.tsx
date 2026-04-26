@@ -242,8 +242,8 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          <span className="text-secondary uppercase tracking-widest text-lg text-gray-900 dark:text-white">{a.techBadge}</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl text-gray-900 dark:text-white">
+          <span className="text-secondary uppercase tracking-widest text-lg text-gray-900 dark:text-gray-100">{a.techBadge}</span>
+          <h2 className="mt-2 text-3xl sm:text-4xl text-gray-900 dark:text-gray-100">
             {a.techHeading}
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 rounded-md bg-linear-to-r from-primary to-secondary" />
@@ -251,31 +251,31 @@ export default function About() {
 
         <div className="grid grid-cols-1 gap-6 rounded-[2.25rem] md:border md:border-white/60 md:bg-white/75 shadow-[0_24px_90px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-slate-700 dark:bg-slate-800 lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
-            className="rounded-md shadow-md px-6 lg:px-8 py-8 text-white "
+            className="rounded-md shadow-md px-6 lg:px-8 py-8 text-gray-900 dark:text-gray-100"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <p className="text-lg font-semibold uppercase tracking-[0.32em] text-accent/90">{a.techIntegratedBadge}</p>
+            <p className="text-lg font-semibold uppercase tracking-[0.32em]">{a.techIntegratedBadge}</p>
             <h3 className="mt-4 max-w-lg text-2xl leading-tight sm:text-3xl">
               {a.techSubheading}
             </h3>
-            <p className="mt-6 text-lg leading-relaxed text-white/78 mb-6">
+            <p className="mt-6 text-lg leading-relaxed mb-6">
               {a.techPara1}
             </p>
-            <p className="text-lg leading-relaxed text-white/78 mb-6">
+            <p className="text-lg leading-relaxed mb-6">
               {a.techPara2}
             </p>
-            <p className="text-lg leading-relaxed text-white/78">
+            <p className="text-lg leading-relaxed">
               {a.techPara3}
             </p>
 
             <div className="mt-8 grid gap-4">
               {a.techPoints.map((point, i) => (
                 <div key={i} className="rounded-md shadow-2xl border border-white/24 bg-white/24 p-4 backdrop-blur-md">
-                  <p className="text-3xl font-bold text-accent">0{i + 1}</p>
-                  <p className="mt-2 text-lg text-white/72">{point}</p>
+                  <p className="text-3xl font-bold">0{i + 1}</p>
+                  <p className="mt-2 text-lg">{point}</p>
                 </div>
               ))}
             </div>
@@ -288,7 +288,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.2, delay: 0.1 }}
           >
-            <div className="relative min-h-96 md:aspect-4/3 overflow-hidden rounded-md bg-gray-100 shadow-md ring-1 ring-gray-200 dark:bg-gray-800 dark:ring-gray-700">
+            <div className="relative min-h-96 md:aspect-4/3 overflow-hidden rounded-md bg-gray-100 shadow-md ring-1 ring-gray-200 dark:bg-gray-900 dark:ring-gray-100">
               <Image
                 src="/images/hybrid-solar-wind -energy.png"
                 alt="Smart VAWT hybrid technology deployment by AeroSun Energy"
