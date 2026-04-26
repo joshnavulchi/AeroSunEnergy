@@ -41,57 +41,57 @@ export default function WhyChooseUs() {
   }))
 
   return (
-    <section id="why-us" className="px-6 sm:px-3 lg:px-12 bg-gray-50 dark:bg-gray-900 pb-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          className="text-center mb-1"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <span className="text-gray-600 dark:text-white">{w.sectionBadge}</span>
-          <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 font-semibold dark:text-white">
-            {w.heading}
-          </h2>
-          <div className="mt-4 mx-auto w-16 h-1 rounded-md bg-linear-to-r from-primary to-secondary" />
-        </motion.div>
+    <section id="why-us" className="bg-gray-50 dark:bg-gray-900 overflow-hidden">
+      <motion.div
+        className="text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
+        <span className="text-primary uppercase tracking-widest text-lg text-gray-900 dark:text-gray-100">{w.sectionBadge}</span>
+        <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 font-semibold dark:text-gray-100">
+          {w.heading}
+        </h2>
+        <p className="bg-gray-50 dark:bg-gray-900 mt-4 text-lg text-gray-50 dark:text-gray-900 max-w-3xl mx-auto">Test</p>
+        <div className="mt-6 mx-auto w-16 h-1 rounded-md bg-linear-to-r from-primary to-secondary"></div>
+      </motion.div>
 
-        {/* Why Choose Us Image */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.2, delay: 0.2 }}
-        >
-          <div className="relative max-w-7xl mx-auto">
-            <div className="absolute inset-0 rounded-md bg-linear-to-r from-accent/20 via-primary/20 to-secondary/20 blur-3xl" aria-hidden="true" />
-            <div className="relative overflow-hidden rounded-md border border-white/20 bg-white/90 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-slate-950/90">
-              <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
-                {w.imageBadge}
-              </div>
-              <div className="relative min-h-96 md:aspect-video overflow-hidden">
-                <Image
-                  src="/images/future-aerosunenergy.png"
-                  alt="AeroSun Energy's vision for future renewable energy infrastructure - advanced hybrid systems powering smart cities"
-                  fill
-                  sizes="(min-width: 1024px) 80rem, 92vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-transparent" aria-hidden="true" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-3 bg-green-500/25 backdrop-blur-sm">
-                <p className="text-lg text-white">
-                  {w.imageCaption}
-                </p>
-              </div>
+      {/* Why Choose Us Image */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.2, delay: 0.2 }}
+      >
+        <div className="relative">
+          <div className="absolute inset-0 rounded-md bg-linear-to-r from-accent/20 via-primary/20 to-secondary/20 blur-3xl" aria-hidden="true" />
+          <div className="relative overflow-hidden rounded-md border border-white/20 bg-white/90 shadow-2xl backdrop-blur-sm dark:border-white/10 dark:bg-slate-950/90">
+            <div className="absolute left-6 top-6 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white backdrop-blur-md">
+              {w.imageBadge}
+            </div>
+            <div className="relative min-h-96 md:aspect-video overflow-hidden">
+              <Image
+                src="/images/future-aerosunenergy.png"
+                alt="AeroSun Energy's vision for future renewable energy infrastructure - advanced hybrid systems powering smart cities"
+                fill
+                sizes="(min-width: 1024px) 80rem, 92vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950/50 via-transparent to-transparent" aria-hidden="true" />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-3 bg-green-500/25 backdrop-blur-sm">
+              <p className="text-lg text-white">
+                {w.imageCaption}
+              </p>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </motion.div>
 
+      <div className="px-6 sm:px-3 lg:px-12 py-24">
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -100,15 +100,16 @@ export default function WhyChooseUs() {
           {reasons.map((r) => (
             <motion.div
               key={r.title}
+              className="flex h-full"
               variants={cardVariants}
             >
-              <Card className={`transition-all duration-150 hover:scale-105 hover:shadow-lg ${r.cardBg}`}>
-                <CardContent>
+              <Card className={`flex h-full w-full transition-all duration-150 hover:scale-105 hover:shadow-lg ${r.cardBg}`}>
+                <CardContent className="flex h-full w-full flex-col">
                   <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl p-1 text-2xl shadow-xl ${r.iconBg}`}>
                     {r.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">{r.title}</h3>
-                  <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">{r.desc}</p>
+                  <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-gray-100">{r.title}</h3>
+                  <p className="text-lg leading-relaxed text-gray-500 dark:text-gray-400">{r.desc}</p>
                 </CardContent>
               </Card>
             </motion.div>

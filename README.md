@@ -117,7 +117,7 @@ AeroSunEnergy/
 ### Install dependencies
 
 ```bash
-npm install
+npm ci
 ```
 
 ### Run the development server
