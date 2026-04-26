@@ -187,9 +187,9 @@ export default function Navbar() {
           </div>
 
           {/* Mobile: logo takes flex-1 space, then icons on the right */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 lg:hidden">
             {/* Mobile Language Dropdown — icon only */}
-            <div className="relative lg:hidden" ref={mobileLangRef}>
+            <div className="relative" ref={mobileLangRef}>
               <button
                 onClick={() => setLangOpen(!langOpen)}
                 className={`${themeButtonClass}`}
