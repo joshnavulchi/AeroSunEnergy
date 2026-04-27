@@ -58,7 +58,7 @@ export default function WindGenerators() {
                   {gen.badge}
                 </span>
                 <h3 className="text-2xl font-semibold tracking-widest text-gray-900 dark:text-gray-100 mb-1">{gen.title}</h3>
-                <p className="text-lg font-medium text-primary mb-4 text-gray-600 dark:text-gray-900">{gen.subtitle}</p>
+                <p className="mb-4 text-lg font-medium text-gray-600 text-primary dark:text-gray-300">{gen.subtitle}</p>
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">{gen.description}</p>
 
                 {/* Key specs */}
