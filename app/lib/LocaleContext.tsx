@@ -22,6 +22,7 @@ export type ComponentContent = {
 export type ConceptComponent = {
   name: string
   category?: string
+  image?: string
   content?: ComponentContent
 }
 

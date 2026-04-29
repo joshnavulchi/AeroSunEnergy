@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { getBasicElectricalConceptData, useLocale } from '@/app/lib/LocaleContext'
 
@@ -7,6 +8,13 @@ function toTitleCase(key: string) {
   return key
     .replace(/_/g, ' ')
     .replace(/\b\w/g, (char) => char.toUpperCase())
+}
+
+function slugify(name: string) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 export default function BasicElectricalConceptsContent() {
@@ -36,6 +44,7 @@ export default function BasicElectricalConceptsContent() {
         <section className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {conceptData.components.map((item) => {
             const content = item.content ?? {}
+            const imagePath = item.image ?? `/images/basic-electrical-concepts/${slugify(item.name)}.png`
             const listEntries = Object.entries(content)
               .filter(([, value]) => Array.isArray(value) && value.length > 0) as Array<[string, string[]]>
 
@@ -44,6 +53,18 @@ export default function BasicElectricalConceptsContent() {
                 key={item.name}
                 className="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg"
               >
+                <div className="mb-4 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={imagePath}
+                      alt={item.name}
+                      fill
+                      sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 95vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <h2 className="text-lg font-semibold text-slate-900">{item.name}</h2>
                   {item.category ? (
