@@ -81,7 +81,7 @@ export default function BasicElectricalConceptsContent() {
                   <div className="mt-4 space-y-3">
                     {listEntries.map(([key, values]) => (
                       <div key={key}>
-                        <h3 className="text-md font-semibold uppercase tracking-widest text-slate-500">{toTitleCase(key)}</h3>
+                        <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500">{toTitleCase(key)}</h3>
                         <ul className="mt-2 space-y-1.5">
                           {values.map((value) => (
                             <li key={value} className="rounded-md bg-slate-50 px-3 py-1.5 text-sm text-slate-700">
