@@ -15,7 +15,6 @@ import Footer from '@/app/components/Footer'
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Hero />
       <About />
       <HowItWorks />
@@ -27,7 +26,6 @@ export default function Home() {
       <WindGenerators />
       <WhyChooseUs />
       <CTASection />
-      <Footer />
     </main>
   )
 }
