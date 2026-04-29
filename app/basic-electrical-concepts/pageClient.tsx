@@ -74,14 +74,14 @@ export default function BasicElectricalConceptsContent() {
                   ) : null}
                 </div>
 
-                {content.purpose ? <p className="text-sm text-slate-700"><strong>Purpose:</strong> {content.purpose}</p> : null}
-                {content.working ? <p className="mt-2 text-sm text-slate-700"><strong>Working:</strong> {content.working}</p> : null}
+                {content.purpose ? <p className="text-md text-slate-700"><strong>Purpose:</strong> {content.purpose}</p> : null}
+                {content.working ? <p className="mt-2 text-md text-slate-700"><strong>Working:</strong> {content.working}</p> : null}
 
                 {listEntries.length > 0 ? (
                   <div className="mt-4 space-y-3">
                     {listEntries.map(([key, values]) => (
                       <div key={key}>
-                        <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500">{toTitleCase(key)}</h3>
+                        <h3 className="text-md font-semibold uppercase tracking-widest text-slate-500">{toTitleCase(key)}</h3>
                         <ul className="mt-2 space-y-1.5">
                           {values.map((value) => (
                             <li key={value} className="rounded-md bg-slate-50 px-3 py-1.5 text-sm text-slate-700">
