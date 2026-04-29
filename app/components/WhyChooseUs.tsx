@@ -53,7 +53,6 @@ export default function WhyChooseUs() {
         <h2 className="mt-2 text-3xl sm:text-4xl text-gray-600 font-semibold dark:text-gray-100">
           {w.heading}
         </h2>
-        <p className="bg-gray-50 dark:bg-gray-900 mt-4 text-lg text-gray-50 dark:text-gray-900 max-w-3xl mx-auto">Test</p>
         <div className="mt-6 mx-auto w-16 h-1 rounded-md bg-linear-to-r from-primary to-secondary"></div>
       </motion.div>
 
